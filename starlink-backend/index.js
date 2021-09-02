@@ -31,7 +31,7 @@ app.get('/all-satellites', (req, res)=>{
    .get("https://api.n2yo.com/rest/v1/satellite/above/45.771065/21.196458/132/180/52/&apiKey=3H4Q2H-JCHZWY-EB77MM-4RTN")
    .then(result => {
       const resp= result.data;
-      res.send(resp)
+      res.send(resp.above)
    })
    .catch(err => console.log(err))
 
@@ -44,9 +44,7 @@ app.get ('/satellite-position', (req, res) =>{
   .get("https://api.n2yo.com/rest/v1/satellite/above/45.771065/21.196458/132/180/52/&apiKey=3H4Q2H-JCHZWY-EB77MM-4RTN")
   .then(result => {
      const resp = result.data.above;
-  //    console.log(Object.keys(result.data).forEach(key => {if(key === 'above') result.data[key].map() 
-  // }))
-     const arrayCopy = resp.map(r => ({latitude: r.satlat, longitude: r.satlng, altitude: r.satlat}))
+     const arrayCopy = resp.map(r => ({latitude: r.satlat, longitude: r.satlng}))
      res.send(arrayCopy)   
   })
   .catch(err => console.log(err))
