@@ -1,4 +1,22 @@
 .canvas {
-  margin: 20px;
-  max-width: 1204px;
+  margin: auto;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    148deg,
+    rgba(2, 0, 36, 1) 29%,
+    rgba(12, 12, 45, 1) 49%,
+    rgba(76, 173, 193, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.imagine {
+  /* content: url("/src/components/start.png"); */
+  max-width: 30px;
+  max-height: 30px;
 }
