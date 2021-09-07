@@ -17,7 +17,7 @@ function Canvas({ latLng }) {
       let height = window.innerHeight - 50;
       context.fillStyle = "red";
       context.fillRect(width / 2, height / 2, 10, 10);
-      context.fillRect(500, 500, 20, 20);
+
       latLng.map((coords) => {
         let x, y;
         let spikes = 5;

@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  frontend:
+    container_name: frontend
+    build: ./starlink-frontend
+    ports:
+      - 3000:3000
+    volumes:
+      - ./starlink-frontend:/dockerdemo
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+  backend:
+    container_name: backend
+    build: ./starlink-backend
+    ports:
+      - 30001:30001
+    volumes:
+      - ./starlink-backend:/dockerdemob
+    environment:
+      - CHOKIDAR_USEPOLLING=true
